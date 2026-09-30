@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ORION — Shop</title>
+
+<style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: #050505;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        min-height: 100vh;
+    }
+
+    /* NAVIGATION */
+
+    header {
+        width: 100%;
+        padding: 30px 45px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        animation: fadeDown 0.8s ease;
+    }
+
+    .back {
+        color: white;
+        text-decoration: none;
+
+        font-size: 12px;
+        letter-spacing: 2px;
+
+        transition: 0.3s;
+    }
+
+    .back:hover {
+        opacity: 0.5;
+    }
+
+    nav {
+        display: flex;
+        gap: 35px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+
+        font-size: 12px;
+        letter-spacing: 2px;
+
+        opacity: 0.8;
+
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        opacity: 0.4;
+    }
+
+    /* SHOP */
+
+    .shop {
+        width: 90%;
+        max-width: 1200px;
+
+        margin: 70px auto;
+    }
+
+    .shop h1 {
+        text-align: center;
+
+        font-size: 50px;
+        letter-spacing: 12px;
+
+        margin-bottom: 15px;
+
+        animation: fadeUp 0.8s ease forwards;
+    }
+
+    .shop-subtitle {
+        text-align: center;
+
+        font-size: 12px;
+        letter-spacing: 4px;
+
+        opacity: 0;
+
+        margin-bottom: 70px;
+
+        animation: fadeUp 0.8s ease 0.2s forwards;
+    }
+
+    /* PRODUITS */
+
+    .products {
+        display: flex;
+        justify-content: center;
+    }
+
+    .product {
+        width: 350px;
+        text-align: center;
+
+        opacity: 0;
+
+        animation: fadeUp 0.8s ease 0.4s forwards;
+    }
+
+    .product-image {
+        width: 350px;
+        height: 350px;
+
+        margin: auto;
+
+        background: #111;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        overflow: hidden;
+    }
+
+    .product-image img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+
+        transition: transform 0.5s ease;
+    }
+
+    .product-image:hover img {
+        transform: scale(1.05);
+    }
+
+    .product h2 {
+        margin-top: 20px;
+
+        font-size: 16px;
+        letter-spacing: 3px;
+    }
+
+    .product p {
+        margin-top: 10px;
+
+        font-size: 14px;
+
+        opacity: 0.6;
+    }
+
+    /* BOUTON */
+
+    .product button {
+        margin-top: 20px;
+
+        padding: 13px 30px;
+
+        background: transparent;
+
+        border: 1px solid white;
+
+        color: white;
+
+        font-size: 11px;
+        letter-spacing: 2px;
+
+        cursor: pointer;
+
+        transition: 0.3s;
+    }
+
+    .product button:hover {
+        background: white;
+        color: black;
+
+        transform: translateY(-3px);
+    }
+
+    /* ANIMATIONS */
+
+    @keyframes fadeUp {
+
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    }
+
+    @keyframes fadeDown {
+
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    }
+
+    /* TELEPHONE */
+
+    @media (max-width: 600px) {
+
+        header {
+            padding: 22px 20px;
+        }
+
+        nav {
+            gap: 15px;
+        }
+
+        nav a,
+        .back {
+            font-size: 9px;
+        }
+
+        .shop {
+            margin-top: 40px;
+        }
+
+        .shop h1 {
+            font-size: 35px;
+            letter-spacing: 7px;
+        }
+
+        .product {
+            width: 300px;
+        }
+
+        .product-image {
+            width: 300px;
+            height: 300px;
+        }
+
+    }
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+    <a class="back" href="index.html">
+        ← ORION
+    </a>
+
+    <nav>
+        <a href="shop.html">SHOP</a>
+        <a href="#">ABOUT</a>
+        <a href="#">CONTACT</a>
+    </nav>
+
+</header>
+
+<main class="shop">
+
+    <h1>SHOP</h1>
+
+    <p class="shop-subtitle">
+        ORION COLLECTION
+    </p>
+
+    <section class="products">
+
+        <div class="product">
+
+            <div class="product-image">
+                <img src="images/tshirt.jpg" alt="ORION T-Shirt">
+            </div>
+
+            <h2>ORION T-SHIRT</h2>
+
+            <p>€30.00</p>
+
+            <button>
+                VIEW PRODUCT
+            </button>
+
+        </div>
+
+    </section>
+
+</main>
+
+</body>
+
+</html>
+
+</head>
+
+<body>
+
+<header>
+
+    <a class="back" href="index.html">
+        ← ORION
+    </a>
+
+    <nav>
+
+        <a href="shop.html">
+            SHOP
+        </a>
+
+        <a href="#">
+            ABOUT
+        </a>
+
+        <a href="#">
+            CONTACT
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main class="shop">
+
+    <h1>
+        SHOP
+    </h1>
+
+    <p class="shop-subtitle">
+        ORION COLLECTION
+    </p>
+
+
+    <section class="products">
+
+        <div class="product">
+
+            <div class="product-image">
+
+                <img
+                    src="images/tshirt.jpg"
+                    alt="ORION T-Shirt"
+                >
+
+            </div>
+
+
+            <h2>
+                ORION T-SHIRT
+            </h2>
+
+
+            <p>
+                €30.00
+            </p>
+
+
+            <button>
+                VIEW PRODUCT
+            </button>
+
+        </div>
+
+    </section>
+
+</main>
+
+</body>
+
+</html>
